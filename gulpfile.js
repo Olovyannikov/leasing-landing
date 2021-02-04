@@ -226,7 +226,6 @@ function svgsprite() {
                 },
             })
         )
-        .pipe(dest(path.src.img))
         .pipe(dest(path.build.img));
 }
 
@@ -250,8 +249,8 @@ function grid(callback) {
 }
 
 let build = gulp.series(
-    clean,
-    gulp.parallel(svgsprite, images, js, css, pug2html, fonts)
+    clean, images, svgsprite, pug2html,
+    gulp.parallel( js, css, fonts)
 );
 let watch = gulp.parallel(build, watchFiles, browserSync);
 

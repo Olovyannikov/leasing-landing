@@ -1,0 +1,49 @@
+.header {
+    filter: $filter;
+    object-fit: cover;
+    background-size: cover;
+}
+
+.header__wrapper {
+    @include row-flex;
+}
+
+.header__inner {
+    width: 100%;
+}
+
+.header__title {
+    margin-bottom: 33px;
+    padding-top: 137px;
+    @include col;
+    @include size(12);
+    @include md-block {
+        @include size(6);
+    }
+}
+
+.header__desc {
+    color: $c-white-0;
+    font-family: $font-alt;
+    font-size: rem-calc(26);
+    line-height: rem-calc(44);
+    margin: 0 0 45px;
+    @include col;
+    @include size(12);
+    @include md-block {
+        @include size(6);
+    }
+}
+
+.header__links {
+    @include row-flex;
+    @include col();
+    @include size(12);
+    gap: 20px;
+    padding-bottom: 190px;
+    @include md-block {
+        @include size(6)
+    }
+}
+
+

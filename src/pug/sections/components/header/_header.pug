@@ -1,85 +1,24 @@
-header.header.js-header
-    .header__content
-        .header__container.container
-            .header__wrapper
-                .header__logo
-                    picture
-                        img(width='36' height='36' src="img/icons/logo.svg", alt="Логотип PLM Урал")
-                    | PLM Урал    
-                button(type="button" aria-label="Отрыть меню" ).js-toggler.header__toggler Открыть меню
-                    span
-        hr.header__divider
-        .header__top        
-            .header__container.container
-                .header__dropdown.dropdown
-
-                    p.dropdown__title Сайты группы компаний
-                        svg(width='5' height='10')
-                            use(href="#chev")
-                    ul.dropdown__list
-                        li.dropdown__item
-                            a(href="#").dropdown__link  www.cae-expert.ru
-                        li.dropdown__item
-                            a(href="#").dropdown__link  www.cae-expert.ru
-                        li.dropdown__item
-                            a(href="#").dropdown__link  www.cae-expert.ru
-                        li.dropdown__item
-                            a(href="#").dropdown__link  www.cae-expert.ru
-                        li.dropdown__item
-                            a(href="#").dropdown__link  www.cae-expert.ru
-                        li.dropdown__item
-                            a(href="#").dropdown__link  www.cae-expert.ru
-            
-        hr.header__divider 
-        
-        .header__container.container             
-            nav.header__nav
-                ul.header__nav-list
-                    li.header__nav-item
-                        a(href="#").header__nav-link Главная
-                    li.header__nav-item
-                        a(href="#").header__nav-link Решения
-                    li.header__nav-item
-                        a(href="#").header__nav-link Проекты
-                    li.header__nav-item
-                        a(href="#").header__nav-link Услуги
-                    li.header__nav-item
-                        a(href="#").header__nav-link О компании
-        
-        hr.header__divider    
-        
-        .header__container.container              
-            ul.header__links
-                li.header__links-item
-                    a(href="#").header__links-link Новости
-                li.header__links-item
-                    a(href="#").header__links-link Мероприятия
-                li.header__links-item
-                    a(href="#").header__links-link Материалы
-                li.header__links-item
-                    a(href="#").header__links-link Видео
-                li.header__links-item
-                    a(href="#").header__links-link Индустрия 4.0
-                li.header__links-item
-                    a(href="#").header__links-link Контакты
-            button(type="button").header__button.button.button--primary Получить консультацию
-            .header__contacts
-                ul.header__social.social
-                    li.social__item
-                        a(href="#").social__link
-                            svg(width='27' height='15')
-                                use(href="#vk-logo")
-                    li.social__item
-                        a(href="#").social__link
-                            svg(width='13' height='27')
-                                use(href="#fb-logo")
-                    li.social__item
-                        a(href="#").social__link
-                            svg(width='29' height='21')
-                                use(href="#yt-logo")
-                    li.social__item
-                        a(href="#").social__link
-                            svg(width='29' height='24')
-                                use(href="#tg-logo")
-                a(href="#").header__contacts-tel 8 800 500 1993
-                a(href="#").header__contacts-email info@plm-ural.ru
+div.debug-grid
+    div
+        div
+            div
+            div
+            div
+            div
+            div
+            div
+            div
+            div
+            div
+            div
+            div
+            div
+header.header(style="background-color: plum; background-image: url(img/hero.jpg); background-repeat: no-repeat; background-position: center;")
+    .header__container.container
+        .header__wrapper
+            .header__inner
+                h1.header__title.title Лизинг промышленного оборудования
+                p.header__desc Расширяйте границы бизнеса уже сегодня - оплачивайте завтра
+                .header__links
+                    a.header__link.btn.btn_secondary(href="#request") Оформить заявку
+                    a.header__link.btn.btn_primary(href="#question") Задать вопрос

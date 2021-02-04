@@ -3,14 +3,13 @@
 2. [PUG](https://pugjs.org)
 3. [SASS](https://sass-scss.ru/); 
 4. [ES6](https://habr.com/ru/post/305900/);
-5. [SwiperJS](https://swiperjs.com/);
-6. [Smart-Grid](https://grid4web.ru/basics/about);
+5. [Smart-Grid](https://grid4web.ru/basics/about);
 
 # View
-https://olovyannikov.github.io/smart-grid/build
+https://olovyannikov.github.io/leasing-landing/build
 
 # Source code
-https://github.com/Olovyannikov/smart-grid
+https://github.com/Olovyannikov/leasing-landing
 
 # Install
 

@@ -40,6 +40,7 @@ body {
             overflow: hidden;
         }
     }
+
     > svg {
         display: none;
     }
@@ -91,11 +92,13 @@ img {
     background-color: rgba(0, 0, 0, 0.15);
     z-index: 20;
     transition: 0.3s all;
+
     &.active {
         opacity: 1;
         visibility: visible;
         backdrop-filter: blur(1px);
     }
+
     &--menu {
         opacity: 1;
         visibility: visible;
@@ -106,4 +109,56 @@ img {
 .container {
     @include wrapper;
     width: 100%;
+}
+
+.title {
+    margin: 0;
+    color: $c-white-0;
+    font-weight: 700;
+    font-family: $font;
+    font-size: rem-calc(36);
+    line-height: rem-calc(48);
+    @include md-block {
+        font-size: rem-calc(50);
+        line-height: rem-calc(64);
+    }
+}
+
+.btn {
+    @include btn-reset;
+
+    position: relative;
+    box-sizing: border-box;
+    border: none;
+    padding: 0 16px;
+    //box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+    outline: none;
+
+    text-transform: uppercase;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 65px;
+    width: 100%;
+    color: $c-white-0;
+    font-family: $font-alt;
+    font-size: rem-calc(16);
+    line-height: rem-calc(28);
+    border-radius: 4px;
+    background: $c-green-0;
+    transition: .5s;
+    &_secondary {
+        background: $c-orange-0;
+    }
+    &:hover {
+        box-shadow:  0px 4px 3px rgba(0, 0, 0, 0.12);
+    }
+    &:active {
+        box-shadow: inset 4px 4px 3px rgba(0, 0, 0, 0.12);
+        text-shadow: 0px 2px 3px rgba(0, 0, 0, 0.12);
+    }
+    @include md-block {
+        max-width: 240px;
+    }
 }
