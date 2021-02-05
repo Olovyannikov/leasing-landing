@@ -13,33 +13,4 @@
 
 //blocks (styles for blocks)
 @import "blocks/header/header";
-
-
-@mixin debug($background, $outline){
-    height: 100vh;
-    position: fixed;
-    width: 100%;
-    z-index: 999;
-
-    > div{
-        height: inherit;
-        @include wrapper();
-
-        > div{
-            height: inherit;
-            @include row-flex();
-
-            > div{
-                @include col();
-                @include size(1);
-                height: inherit;
-                outline: $outline;
-                background: $background;
-            }
-        }
-    }
-}
-
-.debug-grid{
-    @include debug(rgba(255, 0, 0, 0.1), 1px solid #ff0000);
-}
+@import "blocks/main/features/features";

@@ -122,6 +122,16 @@ img {
         font-size: rem-calc(50);
         line-height: rem-calc(64);
     }
+    &_section {
+        text-align: center;
+        color: $c-black-0;
+        font-size: rem-calc(22);
+        line-height: rem-calc(34);
+        @include md-block {
+            font-size: rem-calc(36);
+            line-height: rem-calc(60);
+        }
+    }
 }
 
 .btn {
@@ -161,4 +171,8 @@ img {
     @include md-block {
         max-width: 240px;
     }
+}
+
+.debug-grid{
+    @include debug(rgba(255, 0, 0, 0.1), 1px solid #ff0000);
 }
