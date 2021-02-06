@@ -1,0 +1,39 @@
+.stuff__title {
+    margin-bottom: 43px;
+}
+
+.stuff__list {
+    @include list-reset;
+    @include row-flex;
+    padding-bottom: 63px;
+}
+
+.stuff__item {
+    @include col;
+    @include size(12);
+    position: relative;
+    padding-left: 24px;
+    @include md-block {
+        @include size(6)
+    }
+    svg {
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        fill: $c-grey-400;
+    }
+}
+
+.stuff__item-descr {
+    color: $c-black-100;
+    font-family: $font-alt;
+    line-height: rem-calc(36);
+    font-size: rem-calc(28);
+    margin: 10px 0 10px;
+    @include md-block {
+        font-size: rem-calc(16);
+        line-height: rem-calc(40);
+        margin: 0.75px 0 0.75px;
+    }
+}

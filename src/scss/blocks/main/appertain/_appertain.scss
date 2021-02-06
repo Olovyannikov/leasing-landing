@@ -1,0 +1,80 @@
+.appertain {
+    background-color: $c-grey-300;
+    padding-bottom: 90px;
+}
+
+.appertain__title {
+    margin-bottom: 66px;
+}
+
+
+.appertain__list {
+    @include list-reset;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 171px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 44px rgba(236, 239, 247, 0.7);
+    border-radius: 20px;
+    justify-content: center;
+}
+
+.appertain__item {
+    @include col;
+    @include size(12);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transform: translateY(-50%);
+    margin-bottom: 60px;
+
+    &:last-child {
+        margin-bottom: -60px;
+    }
+
+    @include md-block {
+        @include size(6);
+    }
+    @include lg-block {
+        @include size(4);
+        margin-bottom: 0;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.appertain__item-image {
+    width: 200px;
+    height: 200px;
+    transform: scale(0);
+    background: #c4c4c4;
+    border-radius: 50%;
+    transition: .8s ease 0s;
+
+}
+
+.appertain__descr {
+    font-family: $font-alt;
+    color: $c-blue-300;
+    font-size: rem-calc(20);
+    line-height: rem-calc(28);
+    margin: 0;
+    text-align: center;
+    position: relative;
+    opacity: 0;
+    transition: all .3s ease 0s;
+    @include md-block {
+        top: 25%;
+    }
+}
+
+.appertain__item._active img {
+    transform: scale(1) translate(0, -50%);
+}
+
+.appertain__item._active .appertain__descr {
+    transform: translate(0, 0) translate(0, -250%);
+    opacity: 1;
+    transition: all .8s ease .6s;
+}

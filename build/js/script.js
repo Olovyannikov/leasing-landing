@@ -86,14 +86,27 @@
 /************************************************************************/
 /******/ ({
 
+/***/ "./src/js/modules/animation.js":
+/*!*************************************!*\
+  !*** ./src/js/modules/animation.js ***!
+  \*************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = (function () {\n  var animItems = document.querySelectorAll('._anim-items');\n\n  if (animItems.length > 0) {\n    var animOnScroll = function animOnScroll() {\n      for (var i = 0; i < animItems.length; i++) {\n        var animItem = animItems[i];\n        var animItemHeight = animItem.offsetHeight;\n        var animItemOffset = offset(animItem).top;\n        var animStart = 4;\n        var animItemPoint = window.innerHeight - animItemHeight / animStart;\n\n        if (animItemHeight > window.innerHeight) {\n          animItemPoint = window.innerHeight - window.innerHeight / animStart;\n        }\n\n        if (pageYOffset > animItemOffset - animItemPoint && pageYOffset < animItemOffset + animItemHeight) {\n          animItem.classList.add('_active');\n        } else {\n          if (!animItem.classList.contains('_anim-no-hide')) {\n            animItem.classList.remove('_active');\n          }\n        }\n      }\n    };\n\n    var offset = function offset(el) {\n      var rect = el.getBoundingClientRect();\n      var scrollLeft = window.pageXOffset || document.documentElement.scrollLeft;\n      var scrollTop = window.pageYOffset || document.documentElement.scrollTop;\n      return {\n        top: rect.top + scrollTop,\n        left: rect.left + scrollLeft\n      };\n    };\n\n    window.addEventListener('scroll', animOnScroll);\n    animOnScroll();\n  }\n});\n\n//# sourceURL=webpack:///./src/js/modules/animation.js?");
+
+/***/ }),
+
 /***/ "./src/js/script.js":
 /*!**************************!*\
   !*** ./src/js/script.js ***!
   \**************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-eval("window.addEventListener('DOMContentLoaded', function () {});\n\n//# sourceURL=webpack:///./src/js/script.js?");
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_animation__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/animation */ \"./src/js/modules/animation.js\");\n\nwindow.addEventListener('DOMContentLoaded', function () {\n  Object(_modules_animation__WEBPACK_IMPORTED_MODULE_0__[\"default\"])();\n});\n\n//# sourceURL=webpack:///./src/js/script.js?");
 
 /***/ })
 

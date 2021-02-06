@@ -1,0 +1,7 @@
+mixin stuff(descr)
+
+    li.stuff__item._anim-items._anim-no-hide
+        svg(width='12' height='12')
+            use(href="#gear")
+        p.stuff__item-descr
+            | #{descr}

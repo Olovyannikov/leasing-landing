@@ -127,6 +127,7 @@ img {
         color: $c-black-0;
         font-size: rem-calc(22);
         line-height: rem-calc(34);
+        padding-top: 60px;
         @include md-block {
             font-size: rem-calc(36);
             line-height: rem-calc(60);
@@ -176,3 +177,28 @@ img {
 .debug-grid{
     @include debug(rgba(255, 0, 0, 0.1), 1px solid #ff0000);
 }
+
+._anim-items {
+    transform: translate(0, 120%);
+    transition: all .8s ease 0s;
+    opacity: 0;
+    &._active {
+        transform: translate(0, 0);
+        transition: all 0.8s ease 0s;
+        opacity: 1;
+    }
+}
+
+._anim-show {
+    transform: translate(0px, 120%);
+    opacity: 0;
+    transition: all .8s ease 0s;
+}
+
+._anim-show._active,
+._active ._anim-show {
+    opacity: 1;
+    transform: translate(0,0);
+}
+
+
