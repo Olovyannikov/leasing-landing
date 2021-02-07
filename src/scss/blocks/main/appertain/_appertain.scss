@@ -74,7 +74,10 @@
 }
 
 .appertain__item._active .appertain__descr {
-    transform: translate(0, 0) translate(0, -250%);
+    transform: translate(0, 0) translate(0, -150%);
     opacity: 1;
     transition: all .8s ease .6s;
+    @include md-block {
+        transform: translate(0, 0) translate(0, -250%);
+    }
 }

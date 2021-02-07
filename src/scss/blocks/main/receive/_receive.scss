@@ -1,3 +1,10 @@
+.receive {
+    padding-bottom: 90px;
+}
+
 .receive__title {
-    margin-bottom: calc(68px + 88px + 68px);
+    margin-bottom: 60px;
+    @include md-block {
+        margin-bottom: calc(68px + 88px + 68px);
+    }
 }

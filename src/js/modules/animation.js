@@ -35,7 +35,9 @@ export default () => {
             return {top: rect.top + scrollTop, left: rect.left + scrollLeft}
         }
 
-        animOnScroll();
+        setTimeout(() => {
+            animOnScroll();
+        }, 300)
 
     }
 }

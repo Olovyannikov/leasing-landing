@@ -1,0 +1,50 @@
+.conditions {
+    margin-bottom: 11px;
+}
+
+.conditions__title {
+    margin-bottom: 44px;
+}
+
+.conditions__list {
+    display: flex;
+    @include col;
+    align-items: center;
+    margin: 0;
+
+    &:nth-child(2n-1) {
+        background: #F8F9FC;
+    }
+
+    padding-left: 10px;
+    padding-right: 10px;
+    @include md-block {
+        @include size(9.1);
+        padding-left: 40px;
+        padding-right: 40px;
+        justify-content: space-between;
+        margin: 0 auto;
+    }
+}
+
+.conditions__termin {
+    color: #015293;
+    font-family: $font-alt;
+    font-size: rem-calc(16);
+    line-height: rem-calc(28);
+    @include md-block {
+        line-height: rem-calc(55);
+    }
+}
+
+.conditions__descr {
+    color: #000;
+    font-family: $font-alt;
+    font-size: rem-calc(16);
+    line-height: rem-calc(28);
+    text-align: right;
+    margin-left: auto;
+    @include md-block {
+        line-height: rem-calc(55);
+    }
+}

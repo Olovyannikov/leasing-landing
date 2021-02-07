@@ -1,0 +1,90 @@
+.callback {
+    padding-bottom: 80px;
+    object-fit: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-bottom: 60px;
+}
+
+.callback__title {
+    padding-top: 70px;
+    margin: 0 auto 9px;
+    @include size(12);
+    @include md-block {
+        @include size(8);
+    }
+}
+
+.callback__descr {
+    color: $c-white-0;
+    margin: 0 0 32px;
+    font-size: rem-calc(22);
+    line-height: rem-calc(42);
+    text-align: center;
+}
+
+.callback__form {
+    justify-content: center;
+    @include row-flex;
+    margin: 0 auto;
+    @include col;
+    @include size(12);
+
+    .callback__group {
+        width: 100%;
+        padding: 0;
+        border: 0;
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 24px;
+        margin: 0 auto 30px;
+        justify-content: center;
+    }
+}
+
+.callback__input {
+    background: #FFFFFF;
+    box-shadow: inset 0px 4px 3px rgba(0, 0, 0, 0.12);
+    border-radius: 5px;
+    font-family: $font-alt;
+    font-weight: 500;
+    font-size: rem-calc(15);
+    line-height: rem-calc(42);
+    color: #ABADB1;
+    padding-left: 20px;
+    border: none;
+    padding-top: 1.5px;
+    padding-bottom: 1.5px;
+    transition: .5s;
+
+    &:active {
+        outline: none;
+        box-shadow: 0 0 2px $c-green-0;
+    }
+
+    &:focus {
+        outline: none;
+        box-shadow: 0 0 5px $c-green-0;
+    }
+
+    width: 100%;
+    margin-bottom: 20px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    @include md-block {
+        width: 260px;
+        margin-bottom: 0;
+    }
+}
+
+.callback__btn {
+    margin: 0 auto;
+    @include md-block {
+        min-width: 252px;
+        height: 55px;
+    }
+}

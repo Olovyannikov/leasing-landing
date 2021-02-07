@@ -14,8 +14,17 @@
     padding-top: 137px;
     @include col;
     @include size(12);
+
+    transform: translate(0, 120%);
+    opacity: 0;
+    transition: all .8s ease 0s;
+
     @include md-block {
         @include size(6);
+    }
+    &._active {
+        transform: translate(0,0);
+        opacity: 1;
     }
 }
 
@@ -27,8 +36,18 @@
     margin: 0 0 45px;
     @include col;
     @include size(12);
+
+    transform: translate(0, 120%);
+    opacity: 0;
+    transition: all .8s ease 0s;
+
     @include md-block {
         @include size(6);
+    }
+    &._active {
+        transform: translate(0,0);
+        opacity: 1;
+        transition: all .8s ease 0.4s;
     }
 }
 
@@ -38,7 +57,16 @@
     @include size(12);
     gap: 20px;
     padding-bottom: 190px;
+
+    transform: translate(0, 120%);
+    opacity: 0;
+    transition: all .8s ease 0s;
     @include md-block {
         @include size(6);
+    }
+    &._active {
+        transform: translate(0,0);
+        opacity: 1;
+        transition: all .8s ease .8s;
     }
 }

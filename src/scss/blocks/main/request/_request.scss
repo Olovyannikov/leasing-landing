@@ -1,0 +1,62 @@
+.request {
+    background: #F8F9FC;
+    padding-bottom: 98px;
+}
+
+.request__title {
+    text-align: center;
+    color: #0D2A56;
+    font-size: rem-calc(23);
+    line-height: rem-calc(40);
+    padding-top: 82px;
+    font-weight: 600;
+    margin: 0 auto 9px;
+}
+
+.request__descr {
+    margin: 0 0 32px;
+    font-size: rem-calc(23);
+    line-height: rem-calc(42);
+    text-align: center;
+    color: #0d2a56;
+}
+
+.request__form {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    @include md('width', '640px');
+}
+
+.request__input {
+    color: #fff;
+    font-weight: 500;
+    font-family: $font-alt;
+    font-size: rem-calc(15);
+    line-height: rem-calc(42);
+    padding-left: 20px;
+    background: #D4D9E9;
+    box-shadow: inset 0px 4px 3px rgba(0, 0, 0, 0.03);
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border: none;
+    height: 50px;
+    margin: 0;
+    &::placeholder {
+        color: #fff;    }
+    @include md-block {
+
+        width: 440px;
+    }
+}
+
+.request__btn {
+    @include btn-reset;
+    background: #5AB772;
+    border-radius: 0 5px 5px 0;
+    color: $c-white-0;
+    min-width: 200px;
+    height: 50px;
+    margin: 0;
+}
