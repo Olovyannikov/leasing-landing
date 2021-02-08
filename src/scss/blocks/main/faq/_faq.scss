@@ -1,0 +1,112 @@
+.faq {
+    background: #F8F9FC;
+    padding-bottom: 89px;
+}
+
+.faq__title {
+    margin-bottom: 43px;
+}
+
+$divider: 1px solid #E5E9F3;
+$title: #015293;
+$title-hover: #2f3a53;
+
+.accordion {
+    @include col;
+    margin: 0 auto 11px;
+    width: 100%;
+    @include md-block {
+        width: 83%;
+    }
+    .accordion-item:not(:last-child) {
+        border-bottom: $divider;
+    }
+    .accordion-title {
+        font-size: rem-calc(18);
+        line-height: rem-calc(46);
+        color: $title;
+        font-weight: 600;
+        transition: .5s;
+    }
+    .accordion-button {
+        position: relative;
+        display: block;
+        text-align: left;
+        width: 100%;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        padding-left: 0;
+        color: #485667;
+        font-size: rem-calc(14);
+        line-height: rem-calc(20);
+        font-weight: 400;
+        border: none;
+        background: none;
+        outline: none;
+        &:hover,
+        &:focus {
+            cursor: pointer;
+            .accordion-title {
+                color: $title-hover;
+            }
+            .icon {
+                svg {
+                    fill: #2F3A53;
+                }
+            }
+        }
+        .icon {
+            transition: 0.5s;
+            display: block;
+            position: absolute;
+            top: 50%;
+            right: 0;
+            width: 15px;
+            height: 15px;
+            border-radius: 22px;
+            transform: translateY(-50%) translateX(-50%);
+            svg {
+                transition: all .5s;
+                transform: rotate(180deg);
+                fill: #015293;
+            }
+        }
+    }
+    .accordion-button--active {
+        .icon {
+            svg {
+                transform: rotate(360deg);
+                fill: #337AB7;
+            }
+        }
+        + .accordion-content {
+            opacity: 1;
+            max-height: 9em;
+            transition: all 200ms linear;
+            will-change: opacity, max-height;
+        }
+    }
+    .accordion-content {
+        opacity: 0;
+        max-height: 0;
+        overflow: hidden;
+        transition: opacity 200ms linear, max-height 200ms linear;
+        will-change: opacity, max-height;
+        p {
+            font-family: $font-alt;
+            color: #333;
+            font-size: rem-calc(16);
+            line-height: rem-calc(32);
+            font-weight: 400;
+            margin: 0;
+            padding-bottom: 25px;
+            padding-right: 52px;
+        }
+    }
+}
+
+.accordion__title {
+    border-bottom: 1px solid #bfcad8;
+    padding-bottom: 40px;
+    margin: 0;
+}

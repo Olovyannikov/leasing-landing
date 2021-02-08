@@ -1,0 +1,89 @@
+.advantages {
+    background: rgb(255, 255, 255);
+    padding-bottom: 160px;
+    overflow: hidden;
+
+    background:  url("../img/big-gear.svg") no-repeat bottom right, linear-gradient(180deg, rgba(255, 255, 255, 1) 50%, rgba(1, 82, 147, 1) 50%);
+    @include md-block {
+        background: url("../img/big-gear.svg") no-repeat bottom right ,linear-gradient(90deg, rgba(255, 255, 255, 1) 50%, rgba(1, 82, 147, 1) 50%);
+        background-position: 100% 115% ;
+    }
+}
+
+.advantages__wrapper {
+    @include md-block {
+        display: flex;
+    }
+}
+
+.advantages__article {
+    padding-top: 180px;
+    margin-right: 140px;
+}
+
+.advantages__title {
+    margin: 0 0 50px;
+    color: #0d2a56;
+    font-size: rem-calc(30);
+    line-height: rem-calc(46);
+    font-weight: 600;
+}
+
+.advantages__descr {
+    margin: 0;
+
+    color: #333;
+    font-family: $font-alt;
+    font-size: rem-calc(16);
+    line-height: rem-calc(32);
+    @include md-block {
+        width: 500px;
+    }
+}
+
+.advantages__services {
+    padding-top: 120px;
+    position: relative;
+}
+
+.advantages__subtitle {
+    color: $c-white-0;
+    font-size: rem-calc(26);
+    line-height: rem-calc(36);
+    font-weight: 600;
+    margin: 0 0 28px;
+}
+
+.advantages__list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.advantage__item {
+    font-family: $font-alt;
+    font-size: rem-calc(16);
+    line-height: rem-calc(36);
+    font-weight: 500;
+    color: $c-white-0;
+    z-index: 1;
+    position: relative;
+    &::before {
+        content: '';
+        width: 4px;
+        height: 4px;
+        vertical-align: middle;
+        margin-right: 7px;
+        background: #92bfe2;
+        border-radius: 50%;
+        display: inline-block;
+    }
+}
+
+.advantages__image {
+    position: absolute;
+    transform: translateX(102%) translateY(-47%);
+    z-index: 0;
+    @include md-block {
+        transform: translateX(202%) translateY(-47%);
+    }
+}

@@ -86,6 +86,18 @@
 /************************************************************************/
 /******/ ({
 
+/***/ "./src/js/modules/accordion.js":
+/*!*************************************!*\
+  !*** ./src/js/modules/accordion.js ***!
+  \*************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = (function () {\n  var items = document.querySelectorAll(\".accordion button\");\n\n  var _loop = function _loop(i) {\n    items[i].addEventListener('click', function () {\n      items[i].classList.toggle('accordion-button--active');\n    });\n  };\n\n  for (var i = 0; i < items.length; i++) {\n    _loop(i);\n  }\n\n  function toggleAccordion() {\n    var itemToggle = this.getAttribute('aria-expanded');\n\n    for (var _i = 0; _i < items.length; _i++) {\n      items[_i].setAttribute('aria-expanded', 'false');\n    }\n\n    if (itemToggle === 'false') {\n      this.setAttribute('aria-expanded', 'true');\n    }\n  }\n\n  items.forEach(function (item) {\n    return item.addEventListener('click', toggleAccordion);\n  });\n});\n\n//# sourceURL=webpack:///./src/js/modules/accordion.js?");
+
+/***/ }),
+
 /***/ "./src/js/modules/animation.js":
 /*!*************************************!*\
   !*** ./src/js/modules/animation.js ***!
@@ -106,7 +118,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ 
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_animation__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/animation */ \"./src/js/modules/animation.js\");\n\nwindow.addEventListener('DOMContentLoaded', function () {\n  Object(_modules_animation__WEBPACK_IMPORTED_MODULE_0__[\"default\"])();\n});\n\n//# sourceURL=webpack:///./src/js/script.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_animation__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/animation */ \"./src/js/modules/animation.js\");\n/* harmony import */ var _modules_accordion__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/accordion */ \"./src/js/modules/accordion.js\");\n\n\nwindow.addEventListener('DOMContentLoaded', function () {\n  Object(_modules_animation__WEBPACK_IMPORTED_MODULE_0__[\"default\"])();\n  Object(_modules_accordion__WEBPACK_IMPORTED_MODULE_1__[\"default\"])();\n});\n\n//# sourceURL=webpack:///./src/js/script.js?");
 
 /***/ })
 

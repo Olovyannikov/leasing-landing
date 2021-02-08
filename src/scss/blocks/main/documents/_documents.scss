@@ -9,9 +9,11 @@
 .documents__item {
     display: flex;
     position: relative;
-    padding-left: 130px;
     flex-direction: column;
     margin-bottom: 64px;
+    @include md-block {
+        padding-left: 130px;
+    }
 }
 
 .documents__icon {
@@ -20,7 +22,12 @@
     height: 100px;
     background: #F8F9FC;
     border-radius: 50%;
-    left: 0;
+    right: 0;
+    z-index: -1;
+    @include md-block {
+        left: 0;
+        right: unset;
+    }
 
     svg {
         content: '';

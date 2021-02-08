@@ -1368,7 +1368,6 @@ img {
   display: -ms-flexbox;
   display: flex;
   position: relative;
-  padding-left: 130px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -1382,7 +1381,8 @@ img {
   height: 100px;
   background: #F8F9FC;
   border-radius: 50%;
-  left: 0;
+  right: 0;
+  z-index: -1;
 }
 
 .documents__icon svg {
@@ -1505,6 +1505,221 @@ img {
 
 .request__btn:focus {
   outline: none;
+}
+
+.advantages {
+  background: white;
+  padding-bottom: 160px;
+  overflow: hidden;
+  background: url("../img/big-gear.svg") no-repeat bottom right, -webkit-gradient(linear, left top, left bottom, color-stop(50%, white), color-stop(50%, #015293));
+  background: url("../img/big-gear.svg") no-repeat bottom right, -o-linear-gradient(top, white 50%, #015293 50%);
+  background: url("../img/big-gear.svg") no-repeat bottom right, linear-gradient(180deg, white 50%, #015293 50%);
+}
+
+.advantages__article {
+  padding-top: 180px;
+  margin-right: 140px;
+}
+
+.advantages__title {
+  margin: 0 0 50px;
+  color: #0d2a56;
+  font-size: 1.875rem;
+  line-height: 2.875rem;
+  font-weight: 600;
+}
+
+.advantages__descr {
+  margin: 0;
+  color: #333;
+  font-family: "Lato", "Arial", sans-serif;
+  font-size: 1rem;
+  line-height: 2rem;
+}
+
+.advantages__services {
+  padding-top: 120px;
+  position: relative;
+}
+
+.advantages__subtitle {
+  color: #ffffff;
+  font-size: 1.625rem;
+  line-height: 2.25rem;
+  font-weight: 600;
+  margin: 0 0 28px;
+}
+
+.advantages__list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.advantage__item {
+  font-family: "Lato", "Arial", sans-serif;
+  font-size: 1rem;
+  line-height: 2.25rem;
+  font-weight: 500;
+  color: #ffffff;
+  z-index: 1;
+  position: relative;
+}
+
+.advantage__item::before {
+  content: '';
+  width: 4px;
+  height: 4px;
+  vertical-align: middle;
+  margin-right: 7px;
+  background: #92bfe2;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.advantages__image {
+  position: absolute;
+  -webkit-transform: translateX(102%) translateY(-47%);
+      -ms-transform: translateX(102%) translateY(-47%);
+          transform: translateX(102%) translateY(-47%);
+  z-index: 0;
+}
+
+.partners {
+  padding-bottom: 81px;
+}
+
+.faq {
+  background: #F8F9FC;
+  padding-bottom: 89px;
+}
+
+.faq__title {
+  margin-bottom: 43px;
+}
+
+.accordion {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  word-wrap: break-word;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin: 0 auto 11px;
+  width: 100%;
+}
+
+.accordion .accordion-item:not(:last-child) {
+  border-bottom: 1px solid #E5E9F3;
+}
+
+.accordion .accordion-title {
+  font-size: 1.125rem;
+  line-height: 2.875rem;
+  color: #015293;
+  font-weight: 600;
+  -webkit-transition: .5s;
+  -o-transition: .5s;
+  transition: .5s;
+}
+
+.accordion .accordion-button {
+  position: relative;
+  display: block;
+  text-align: left;
+  width: 100%;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 0;
+  color: #485667;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 400;
+  border: none;
+  background: none;
+  outline: none;
+}
+
+.accordion .accordion-button:hover,
+.accordion .accordion-button:focus {
+  cursor: pointer;
+}
+
+.accordion .accordion-button:hover .accordion-title,
+.accordion .accordion-button:focus .accordion-title {
+  color: #2f3a53;
+}
+
+.accordion .accordion-button:hover .icon svg,
+.accordion .accordion-button:focus .icon svg {
+  fill: #2F3A53;
+}
+
+.accordion .accordion-button .icon {
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  width: 15px;
+  height: 15px;
+  border-radius: 22px;
+  -webkit-transform: translateY(-50%) translateX(-50%);
+      -ms-transform: translateY(-50%) translateX(-50%);
+          transform: translateY(-50%) translateX(-50%);
+}
+
+.accordion .accordion-button .icon svg {
+  -webkit-transition: all .5s;
+  -o-transition: all .5s;
+  transition: all .5s;
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
+  fill: #015293;
+}
+
+.accordion .accordion-button--active .icon svg {
+  -webkit-transform: rotate(360deg);
+      -ms-transform: rotate(360deg);
+          transform: rotate(360deg);
+  fill: #337AB7;
+}
+
+.accordion .accordion-button--active + .accordion-content {
+  opacity: 1;
+  max-height: 9em;
+  -webkit-transition: all 200ms linear;
+  -o-transition: all 200ms linear;
+  transition: all 200ms linear;
+  will-change: opacity, max-height;
+}
+
+.accordion .accordion-content {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  -webkit-transition: opacity 200ms linear, max-height 200ms linear;
+  -o-transition: opacity 200ms linear, max-height 200ms linear;
+  transition: opacity 200ms linear, max-height 200ms linear;
+  will-change: opacity, max-height;
+}
+
+.accordion .accordion-content p {
+  font-family: "Lato", "Arial", sans-serif;
+  color: #333;
+  font-size: 1rem;
+  line-height: 2rem;
+  font-weight: 400;
+  margin: 0;
+  padding-bottom: 25px;
+  padding-right: 52px;
+}
+
+.accordion__title {
+  border-bottom: 1px solid #bfcad8;
+  padding-bottom: 40px;
+  margin: 0;
 }
 
 @media screen and (min-width: 992px) {
@@ -1690,12 +1905,48 @@ img {
     width: 440px;
   }
 
+  .documents__item {
+    padding-left: 130px;
+  }
+
+  .documents__icon {
+    left: 0;
+    right: unset;
+  }
+
   .request__form {
     width: "640px";
   }
 
   .request__input {
     width: 440px;
+  }
+
+  .advantages {
+    background: url("../img/big-gear.svg") no-repeat bottom right, -webkit-gradient(linear, left top, right top, color-stop(50%, white), color-stop(50%, #015293));
+    background: url("../img/big-gear.svg") no-repeat bottom right, -o-linear-gradient(left, white 50%, #015293 50%);
+    background: url("../img/big-gear.svg") no-repeat bottom right, linear-gradient(90deg, white 50%, #015293 50%);
+    background-position: 100% 115%;
+  }
+
+  .advantages__wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+
+  .advantages__descr {
+    width: 500px;
+  }
+
+  .advantages__image {
+    -webkit-transform: translateX(202%) translateY(-47%);
+        -ms-transform: translateX(202%) translateY(-47%);
+            transform: translateX(202%) translateY(-47%);
+  }
+
+  .accordion {
+    width: 83%;
   }
 }
 

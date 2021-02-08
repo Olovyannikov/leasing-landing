@@ -1,4 +1,6 @@
-import animation, {default as amination} from './modules/animation';
+import animation from './modules/animation';
+import accordion from "./modules/accordion";
 window.addEventListener('DOMContentLoaded', () => {
     animation();
+    accordion();
 });
