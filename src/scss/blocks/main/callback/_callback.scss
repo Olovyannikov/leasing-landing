@@ -37,7 +37,6 @@
         border: 0;
         display: flex;
         flex-wrap: wrap;
-        column-gap: 24px;
         margin: 0 auto 30px;
         justify-content: center;
     }
@@ -76,8 +75,12 @@
     }
 
     @include md-block {
+        margin-right: 24px;
         width: 260px;
         margin-bottom: 0;
+        &:last-child {
+            margin-right: 0;
+        }
     }
 }
 

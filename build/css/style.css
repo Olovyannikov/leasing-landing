@@ -796,7 +796,6 @@ img {
   margin-left: 20px;
   margin-right: 20px;
   width: calc(100% - 40px);
-  gap: 20px;
   padding-bottom: 190px;
   -webkit-transform: translate(0, 120%);
       -ms-transform: translate(0, 120%);
@@ -805,6 +804,14 @@ img {
   -webkit-transition: all .8s ease 0s;
   -o-transition: all .8s ease 0s;
   transition: all .8s ease 0s;
+}
+
+.header__links a {
+  margin-bottom: 20px;
+}
+
+.header__links a:last-child {
+  margin-bottom: 0;
 }
 
 .header__links._active {
@@ -1170,9 +1177,6 @@ img {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-column-gap: 24px;
-     -moz-column-gap: 24px;
-          column-gap: 24px;
   margin: 0 auto 30px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -1321,8 +1325,8 @@ img {
   line-height: 2.625rem;
   padding-left: 20px;
   background: #FFFFFF;
-  -webkit-box-shadow: inset 0px 4px 3px rgba(0, 0, 0, 0.1);
-          box-shadow: inset 0px 4px 3px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: inset 0 4px 3px rgba(0, 0, 0, 0.1);
+          box-shadow: inset 0 4px 3px rgba(0, 0, 0, 0.1);
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
   border: none;
@@ -1455,8 +1459,8 @@ img {
   line-height: 2.625rem;
   padding-left: 20px;
   background: #D4D9E9;
-  -webkit-box-shadow: inset 0px 4px 3px rgba(0, 0, 0, 0.03);
-          box-shadow: inset 0px 4px 3px rgba(0, 0, 0, 0.03);
+  -webkit-box-shadow: inset 0 4px 3px rgba(0, 0, 0, 0.03);
+          box-shadow: inset 0 4px 3px rgba(0, 0, 0, 0.03);
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
   border: none;
@@ -1544,6 +1548,16 @@ img {
 
   .header__links {
     width: calc(50% - 40px);
+  }
+
+  .header__links a {
+    margin-bottom: 0;
+    margin-right: 20px;
+  }
+
+  .header__links a:last-child {
+    margin-bottom: 0;
+    margin-right: 0;
   }
 
   .features__list {
@@ -1636,8 +1650,13 @@ img {
   }
 
   .callback__input {
+    margin-right: 24px;
     width: 260px;
     margin-bottom: 0;
+  }
+
+  .callback__input:last-child {
+    margin-right: 0;
   }
 
   .callback__btn {
