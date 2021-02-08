@@ -81,7 +81,7 @@ $title-hover: #2f3a53;
         }
         + .accordion-content {
             opacity: 1;
-            max-height: 9em;
+            max-height: 100%;
             transition: all 200ms linear;
             will-change: opacity, max-height;
         }

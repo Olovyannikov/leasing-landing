@@ -3,7 +3,7 @@
     padding-bottom: 160px;
     overflow: hidden;
 
-    background:  url("../img/big-gear.svg") no-repeat bottom right, linear-gradient(180deg, rgba(255, 255, 255, 1) 50%, rgba(1, 82, 147, 1) 50%);
+    background:  url("../img/big-gear.svg") no-repeat bottom right, linear-gradient(180deg, rgba(255, 255, 255, 1) 30%, rgba(1, 82, 147, 1) 70%);
     @include md-block {
         background: url("../img/big-gear.svg") no-repeat bottom right ,linear-gradient(90deg, rgba(255, 255, 255, 1) 50%, rgba(1, 82, 147, 1) 50%);
         background-position: 100% 115% ;
@@ -18,7 +18,9 @@
 
 .advantages__article {
     padding-top: 180px;
-    margin-right: 140px;
+    @include md-block {
+        margin-right: 140px;
+    }
 }
 
 .advantages__title {

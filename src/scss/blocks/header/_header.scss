@@ -55,7 +55,7 @@
     @include row-flex;
     @include col();
     @include size(12);
-    padding-bottom: 190px;
+    margin-bottom: 190px;
 
     transform: translate(0, 120%);
     opacity: 0;

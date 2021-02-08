@@ -41,14 +41,19 @@
 }
 
 .documents__title {
-    margin: 0;
-    margin-bottom: 20px;
+    margin: 0 0 20px;
+
     a {
 
         color: #015293;
         font-size: rem-calc(22);
         line-height: rem-calc(46);
         border-bottom: 1px dashed #015293;
+    }
+
+    width: 75%;
+    @include md-block {
+        width: 100%;
     }
 }
 

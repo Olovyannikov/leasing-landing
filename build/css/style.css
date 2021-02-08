@@ -796,7 +796,7 @@ img {
   margin-left: 20px;
   margin-right: 20px;
   width: calc(100% - 40px);
-  padding-bottom: 190px;
+  margin-bottom: 190px;
   -webkit-transform: translate(0, 120%);
       -ms-transform: translate(0, 120%);
           transform: translate(0, 120%);
@@ -1402,8 +1402,8 @@ img {
 }
 
 .documents__title {
-  margin: 0;
-  margin-bottom: 20px;
+  margin: 0 0 20px;
+  width: 75%;
 }
 
 .documents__title a {
@@ -1515,14 +1515,13 @@ img {
   background: white;
   padding-bottom: 160px;
   overflow: hidden;
-  background: url("../img/big-gear.svg") no-repeat bottom right, -webkit-gradient(linear, left top, left bottom, color-stop(50%, white), color-stop(50%, #015293));
-  background: url("../img/big-gear.svg") no-repeat bottom right, -o-linear-gradient(top, white 50%, #015293 50%);
-  background: url("../img/big-gear.svg") no-repeat bottom right, linear-gradient(180deg, white 50%, #015293 50%);
+  background: url("../img/big-gear.svg") no-repeat bottom right, -webkit-gradient(linear, left top, left bottom, color-stop(30%, white), color-stop(70%, #015293));
+  background: url("../img/big-gear.svg") no-repeat bottom right, -o-linear-gradient(top, white 30%, #015293 70%);
+  background: url("../img/big-gear.svg") no-repeat bottom right, linear-gradient(180deg, white 30%, #015293 70%);
 }
 
 .advantages__article {
   padding-top: 180px;
-  margin-right: 140px;
 }
 
 .advantages__title {
@@ -1692,7 +1691,7 @@ img {
 
 .accordion .accordion-button--active + .accordion-content {
   opacity: 1;
-  max-height: 9em;
+  max-height: 100%;
   -webkit-transition: all 200ms linear;
   -o-transition: all 200ms linear;
   transition: all 200ms linear;
@@ -1735,6 +1734,7 @@ img {
   -webkit-box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
           box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 10px;
+  background-size: cover;
 }
 
 .form__data-wrapper {
@@ -2005,6 +2005,10 @@ img {
     right: unset;
   }
 
+  .documents__title {
+    width: 100%;
+  }
+
   .request__form {
     width: "640px";
   }
@@ -2024,6 +2028,10 @@ img {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+  }
+
+  .advantages__article {
+    margin-right: 140px;
   }
 
   .advantages__descr {
