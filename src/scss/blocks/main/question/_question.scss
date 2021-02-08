@@ -56,8 +56,10 @@
     height: 50px;
     margin: 0;
     @include md-block {
-
         width: 440px;
+    }
+    &:focus {
+        outline: none;
     }
 }
 

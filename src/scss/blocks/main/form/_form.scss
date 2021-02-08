@@ -1,0 +1,65 @@
+.form {
+    background: #f8f9fc;
+    padding-bottom: 31px;
+}
+
+.form__wrapper {
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+}
+
+.form__data-wrapper {
+    @include col;
+    @include size(12);
+    padding-bottom: 76px;
+    @include md-block {
+        @include size(3.83);
+        margin-left: $fields + ($offset * 2);
+    }
+}
+
+.form__title {
+    color: $c-white-0;
+    font-size: rem-calc(30);
+    line-height: rem-calc(42);
+    padding-top: 57px;
+    font-weight: 600;
+    margin: 0;
+    text-align: center;
+}
+
+.form__descr {
+    color: $c-white-0;
+    font-size: rem-calc(22);
+    line-height: rem-calc(35);
+    font-weight: 500;
+    margin: 0 0 30px;
+    text-align: center;
+}
+
+.form__input {
+    background: #FFFFFF;
+    box-shadow: inset 0px 4px 3px rgba(0, 0, 0, 0.12);
+    border-radius: 5px;
+    margin-bottom: 20px;
+    border: none;
+    color: #ABADB1;
+    font-size: rem-calc(15);
+    line-height: rem-calc(42);
+    padding-left: 20px;
+    width: 100%;
+    &:last-child {
+        margin-bottom: 30px;
+    }
+}
+
+.form__data-btn {
+    @include btn-reset;
+    color: $c-white-0;
+    background: $c-green-0;
+    font-size: rem-calc(18);
+    line-height: rem-calc(42);
+    border-radius: 5px;
+    height: 55px;
+    width: 100%;
+}
