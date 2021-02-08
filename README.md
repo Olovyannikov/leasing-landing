@@ -14,6 +14,6 @@ https://github.com/Olovyannikov/leasing-landing
 # Install
 
 1. Download or clone this project;
-2. Use `npm install` for installing dependencies;
-3. `npm start` for building source; 
-4. Gulp automatically open your browser on `localhost:3000`;
+2. Use `npm install` or `yarn` for installing dependencies;
+3. `npm start` or `yarn start` for building source; 
+4. Gulp automatically open your browser to `localhost:3000`;
