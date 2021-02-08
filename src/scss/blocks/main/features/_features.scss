@@ -3,7 +3,7 @@
 }
 
 .features__title {
-    margin-bottom: 49px;
+    margin-bottom: 38px;
 
 }
 
@@ -13,6 +13,7 @@
     flex-direction: column;
     @include md-block {
         flex-direction: row;
+        padding-left: 9px;
     }
 }
 
@@ -29,7 +30,7 @@
         fill: $c-green-0;
     }
     @include md-block {
-        margin-bottom: 56px;
+        margin-bottom: 29.5px;
         @include size(6);
         margin-right: 60px;
         &:nth-child(2n) {
@@ -46,7 +47,7 @@
     color: $c-black-0;
     margin: 0;
     @include md-block {
-        line-height: rem-calc(60);
+        line-height: rem-calc(58);
     }
 }
 

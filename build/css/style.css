@@ -829,7 +829,7 @@ img {
 }
 
 .features__title {
-  margin-bottom: 49px;
+  margin-bottom: 38px;
 }
 
 .features__list {
@@ -1871,10 +1871,11 @@ img {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+    padding-left: 9px;
   }
 
   .features__item {
-    margin-bottom: 56px;
+    margin-bottom: 29.5px;
     width: calc(50% - 40px);
     margin-right: 60px;
   }
@@ -1884,7 +1885,7 @@ img {
   }
 
   .features__item-title {
-    line-height: 3.75rem;
+    line-height: 3.625rem;
   }
 
   .appertain__item {
