@@ -829,7 +829,46 @@ img {
 }
 
 .features__title {
-  margin-bottom: 38px;
+  margin-bottom: 48px;
+}
+
+.features__intro-wrap {
+  margin-bottom: 70px;
+  position: relative;
+}
+
+.features__intro-wrap::after {
+  position: absolute;
+  content: '';
+  right: 0;
+  width: 60%;
+  height: 100%;
+  background: #F8F9FC;
+}
+
+.features__intro-text {
+  position: absolute;
+  content: '';
+  top: 40px;
+  right: 0;
+  z-index: 1;
+}
+
+.features__intro-title {
+  color: #1474C0;
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+  font-family: "Montserrat", "Lato", sans-serif;
+  font-weight: 600;
+  margin: 0;
+}
+
+.features__intro-descr {
+  font-family: "Lato", "Arial", sans-serif;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  color: #333;
+  max-width: 530px;
 }
 
 .features__list {
@@ -1804,6 +1843,235 @@ img {
   outline: none;
 }
 
+.modal {
+  --transition-time: 0.3s;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1000;
+  cursor: pointer;
+  overflow-y: auto;
+  overflow-x: hidden;
+  text-align: center;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: opacity var(--transition-time), visibility var(--transition-time);
+  -o-transition: opacity var(--transition-time), visibility var(--transition-time);
+  transition: opacity var(--transition-time), visibility var(--transition-time);
+}
+
+.modal__title {
+  color: #2F3A53;
+  margin: 0 0 30px;
+  font-size: 1.625rem;
+  line-height: 2.875rem;
+  font-weight: 600;
+  font-family: "Montserrat", "Lato", sans-serif;
+  text-align: center;
+}
+
+.modal__form-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.modal__form-group input {
+  padding-left: 20px;
+  border: 2px solid transparent;
+  font-size: 0.9375rem;
+  line-height: 2.625rem;
+  background: #F8F9FC;
+  -webkit-box-shadow: inset 0px 4px 7px rgba(240, 242, 249, 0.5);
+          box-shadow: inset 0px 4px 7px rgba(240, 242, 249, 0.5);
+  border-radius: 5px;
+  margin-bottom: 27px;
+  color: #2F3A53;
+  font-family: "Lato", "Arial", sans-serif;
+}
+
+.modal__form-group input::-webkit-input-placeholder {
+  color: #abadb1;
+}
+
+.modal__form-group input::-moz-placeholder {
+  color: #abadb1;
+}
+
+.modal__form-group input:-ms-input-placeholder {
+  color: #abadb1;
+}
+
+.modal__form-group input::-ms-input-placeholder {
+  color: #abadb1;
+}
+
+.modal__form-group input::placeholder {
+  color: #abadb1;
+}
+
+.modal__form-group input:last-of-type {
+  margin-bottom: 32px;
+}
+
+.modal__form-group input:focus {
+  outline: none;
+}
+
+.modal::before {
+  content: '';
+  display: inline-block;
+  vertical-align: middle;
+  height: 100%;
+  width: 100%;
+  background: rgba(19, 63, 99, 0.8);
+}
+
+.modal__container {
+  position: relative;
+  height: auto;
+  margin: 0 auto;
+  display: none;
+  vertical-align: middle;
+  cursor: default;
+  text-align: left;
+  background: #fff;
+  border-radius: 5px;
+  max-width: 440px;
+}
+
+.modal-close {
+  padding: 0;
+  margin: 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  font-size: 0;
+  width: 15px;
+  height: 15px;
+  background: #fff;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.modal-close:focus {
+  outline: none;
+}
+
+.modal-close::after,
+.modal-close::before {
+  position: absolute;
+  content: '';
+  display: block;
+  width: 21px;
+  height: 2px;
+  -webkit-transform: rotate(45deg) translateY(0);
+      -ms-transform: rotate(45deg) translateY(0);
+          transform: rotate(45deg) translateY(0);
+  background: #aab7d5;
+  top: 0;
+  left: 0;
+  -webkit-transition: .5s;
+  -o-transition: .5s;
+  transition: .5s;
+}
+
+.modal-close::before {
+  -webkit-transform: rotate(-45deg) translateY(0);
+      -ms-transform: rotate(-45deg) translateY(0);
+          transform: rotate(-45deg) translateY(0);
+}
+
+.modal-close:hover::before,
+.modal-close:hover::after {
+  background: #F59595;
+}
+
+.modal__submit {
+  margin: 0 auto;
+  text-transform: unset;
+  width: calc(100% - 40px);
+  height: 60px;
+}
+
+.modal.is-open {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transition: opacity var(--transition-time), visibility var(--transition-time);
+  -o-transition: opacity var(--transition-time), visibility var(--transition-time);
+  transition: opacity var(--transition-time), visibility var(--transition-time);
+}
+
+.modal__container.modal-open {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: auto;
+  top: 50%;
+  left: 50%;
+  z-index: 1001;
+  padding-top: 38px;
+  padding-left: 55px;
+  padding-right: 55px;
+  padding-bottom: 53px;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.modal-open .modal {
+  opacity: 1;
+}
+
+.fade {
+  opacity: 0;
+  -webkit-transition: opacity var(--transition-time);
+  -o-transition: opacity var(--transition-time);
+  transition: opacity var(--transition-time);
+}
+
+.fade.animate-open {
+  opacity: 1;
+  -webkit-transition: opacity var(--transition-time);
+  -o-transition: opacity var(--transition-time);
+  transition: opacity var(--transition-time);
+}
+
+.fadeInUp {
+  opacity: 0;
+  -webkit-transition: opacity var(--transition-time), -webkit-transform var(--transition-time);
+  transition: opacity var(--transition-time), -webkit-transform var(--transition-time);
+  -o-transition: opacity var(--transition-time), transform var(--transition-time);
+  transition: opacity var(--transition-time), transform var(--transition-time);
+  transition: opacity var(--transition-time), transform var(--transition-time), -webkit-transform var(--transition-time);
+}
+
+.fadeInUp.animate-open {
+  opacity: 1;
+  -webkit-transition: opacity var(--transition-time), -webkit-transform var(--transition-time);
+  transition: opacity var(--transition-time), -webkit-transform var(--transition-time);
+  -o-transition: opacity var(--transition-time), transform var(--transition-time);
+  transition: opacity var(--transition-time), transform var(--transition-time);
+  transition: opacity var(--transition-time), transform var(--transition-time), -webkit-transform var(--transition-time);
+}
+
+.disable-scroll {
+  overflow: hidden;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+
 .footer {
   text-align: center;
   color: #333;
@@ -2083,6 +2351,12 @@ img {
 
   body.menu-opened {
     overflow: hidden;
+  }
+}
+
+@media (max-width: 1024px) {
+  .modal__container {
+    width: 90%;
   }
 }
 

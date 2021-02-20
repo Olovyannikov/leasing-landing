@@ -1,0 +1,10 @@
+.modal
+    .modal__container(data-target='first')
+        button.modal-close Закрыть
+        .modal-content
+            h2.modal__title Оформить заявку
+            form.modal__form
+                .modal__form-group
+                    input(type='text' placeholder='Имя')
+                    input(type='tel' placeholder='Телефон')#maskTel
+                    a(href="#").modal__submit.btn.btn_secondary Отправить заявку

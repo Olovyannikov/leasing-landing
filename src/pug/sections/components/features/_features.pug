@@ -1,6 +1,22 @@
 section.features
-    h2.features__title.title.title_section Наши преимущества
+    h2.features__title.title.title_section Помогаем оформить в лизинг <br> даже нестандартное оборудование
     .features__container.container
+        .features__intro._anim-items
+            .features__intro-wrap
+                img(src='img/features.jpg' alt='Услуги для клиента бесплатно')
+                .features__intro-text
+                    h3.features__intro-title  Услуги для клиента БЕСПЛАТНО
+                    p.features__intro-descr Полная консультация, расчет и сбор документов, другие сопровождающие услуги оказываем клиенту бесплатно. <br> За работу нам платят лизинговые компании
+        ul.features__icons
+            li.features__icon
+                svg()
+                    use(href="")
+            li.features__icon
+                svg()
+                    use(href="")
+            li.features__icon
+                svg()
+                    use(href="")
         ul.features__list
             +features('Лучшие предложения партнеров', 'Не каждая лизинговая компания оформляет лизинг промоборудования. Мы не только окажем помощь в получении лизинга, но и подберем для Вас самое выгодное предложение, с минимальными первоначальными взносами')
             +features('Большой выбор оборудования', 'За счет налаженных контактов с партнерами ускоряем процесс выхода на сделку. Поиск, анализ и предоставление лучших предложений клиенту занимает у нас не дольше 3 дней.')

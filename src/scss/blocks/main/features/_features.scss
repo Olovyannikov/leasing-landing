@@ -3,8 +3,45 @@
 }
 
 .features__title {
-    margin-bottom: 38px;
+    margin-bottom: 48px;
+}
 
+.features__intro-wrap {
+    margin-bottom: 70px;
+    position: relative;
+    &::after {
+        position: absolute;
+        content: '';
+        right:  0;
+        width: 60%;
+        height: 100%;
+        background: #F8F9FC;
+    }
+}
+
+.features__intro-text {
+    position: absolute;
+    content: '';
+    top: 40px;
+    right: 0;
+    z-index: 1;
+}
+
+.features__intro-title {
+    color: #1474C0;
+    font-size: rem-calc(24);
+    line-height: rem-calc(40);
+    font-family: $font;
+    font-weight: 600;
+    margin: 0;
+}
+
+.features__intro-descr {
+    font-family: $font-alt;
+    font-size: rem-calc(18);
+    line-height: rem-calc(28);
+    color: #333;
+    max-width: 530px;
 }
 
 .features__list {

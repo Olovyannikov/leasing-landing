@@ -13,14 +13,39 @@
         <div class="header__wrapper">
           <h1 class="header__title title _anim-items _anim-no-hide">Лизинг промышленного оборудования</h1>
           <p class="header__desc _anim-items _anim-no-hide">Расширяйте границы бизнеса уже сегодня - оплачивайте завтра</p>
-          <div class="header__links _anim-items _anim-no-hide"><a class="header__link btn btn_secondary" href="#request">Оформить заявку</a><a class="header__link btn btn_primary" href="#question">Задать вопрос</a></div>
+          <div class="header__links _anim-items _anim-no-hide"><a class="modal-btn header__link btn btn_secondary" type="button" data-path="first" data-animation="fade" data-speed="300">Оформить заявку</a><a class="header__link btn btn_primary" href="#question">Задать вопрос</a></div>
         </div>
       </div>
     </header>
     <main class="main">
       <section class="features">
-        <h2 class="features__title title title_section">Наши преимущества</h2>
+        <h2 class="features__title title title_section">Помогаем оформить в лизинг <br> даже нестандартное оборудование</h2>
         <div class="features__container container">
+          <div class="features__intro _anim-items">
+            <div class="features__intro-wrap"><img src="img/features.jpg" alt="Услуги для клиента бесплатно"/>
+              <div class="features__intro-text">
+                <h3 class="features__intro-title"> Услуги для клиента БЕСПЛАТНО</h3>
+                <p class="features__intro-descr">Полная консультация, расчет и сбор документов, другие сопровождающие услуги оказываем клиенту бесплатно. <br> За работу нам платят лизинговые компании</p>
+              </div>
+            </div>
+          </div>
+          <ul class="features__icons">
+            <li class="features__icon">
+              <svg>
+                <use href=""></use>
+              </svg>
+            </li>
+            <li class="features__icon">
+              <svg>
+                <use href=""></use>
+              </svg>
+            </li>
+            <li class="features__icon">
+              <svg>
+                <use href=""></use>
+              </svg>
+            </li>
+          </ul>
           <ul class="features__list">
                   <li class="features__item _anim-items _anim-no-hide">
                     <svg width="24" height="24">
@@ -528,6 +553,20 @@
           </div>
         </div>
       </section>
+      <div class="modal">
+        <div class="modal__container" data-target="first">
+          <button class="modal-close">Закрыть</button>
+          <div class="modal-content">
+            <h2 class="modal__title">Оформить заявку</h2>
+            <form class="modal__form">
+              <div class="modal__form-group">
+                <input type="text" placeholder="Имя"/>
+                <input type="tel" placeholder="Телефон" id="maskTel"/><a class="modal__submit btn btn_secondary" href="#">Отправить заявку</a>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
     </main>
     <footer class="footer _anim-items _anim-no-hide" id="footer">2000 — 2021 © «Гипер-Пресс»<br/>Equipnet.ru — "Оборудование для бизнеса"</footer>
     <script src="js/script.min.js" type="module"></script>
