@@ -1,83 +1,91 @@
 .advantages {
-    background: rgb(255, 255, 255);
     padding-bottom: 160px;
     overflow: hidden;
 
-    background:  url("../img/big-gear.svg") no-repeat bottom right, linear-gradient(180deg, rgba(255, 255, 255, 1) 30%, rgba(1, 82, 147, 1) 70%);
+    background:  url("../img/big-gear.svg") no-repeat right bottom #074C84;
     @include md-block {
-        background: url("../img/big-gear.svg") no-repeat bottom right ,linear-gradient(90deg, rgba(255, 255, 255, 1) 50%, rgba(1, 82, 147, 1) 50%);
-        background-position: 100% 115% ;
-    }
-}
-
-.advantages__wrapper {
-    @include md-block {
-        display: flex;
+        background: #074C84 url("../img/big-gear.svg") no-repeat 100% 111s%;
     }
 }
 
 .advantages__article {
-    padding-top: 180px;
-    @include md-block {
-        margin-right: 140px;
-    }
+    padding-top: 75px;
+    display: flex;
+    flex-wrap: wrap;
+    @include size(12);
 }
 
 .advantages__title {
     margin: 0 0 50px;
-    color: #0d2a56;
+    color: #fff;
     font-size: rem-calc(30);
     line-height: rem-calc(46);
-    font-weight: 600;
+    font-weight: 700;
+    @include size(12);
+    @include md-block {
+        @include size(6);
+    }
 }
 
 .advantages__descr {
     margin: 0;
-
-    color: #333;
+    color: #d0d7ed;
     font-family: $font-alt;
-    font-size: rem-calc(16);
+    font-size: rem-calc(18);
     line-height: rem-calc(32);
+    @include size(12);
     @include md-block {
         width: 500px;
+        @include size(6);
     }
 }
 
 .advantages__services {
-    padding-top: 120px;
+    padding-top: 100px;
     position: relative;
 }
 
 .advantages__subtitle {
     color: $c-white-0;
-    font-size: rem-calc(26);
+    font-size: rem-calc(30);
     line-height: rem-calc(36);
     font-weight: 600;
-    margin: 0 0 28px;
+    margin: 0 0 69px;
 }
 
 .advantages__list {
+    @include list-reset;
     list-style: none;
     padding-left: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    @media (min-width: 768px) {
+        justify-content: space-between;
+    }
 }
 
 .advantage__item {
     font-family: $font-alt;
-    font-size: rem-calc(16);
-    line-height: rem-calc(36);
-    font-weight: 500;
-    color: $c-white-0;
+    font-size: rem-calc(18);
+    line-height: rem-calc(27);
+    font-weight: 600;
+    color: #d0d7ed;
     z-index: 1;
     position: relative;
-    &::before {
-        content: '';
-        width: 4px;
-        height: 4px;
-        vertical-align: middle;
-        margin-right: 7px;
-        background: #92bfe2;
-        border-radius: 50%;
-        display: inline-block;
+    padding-left: calc(26px + 24px);
+    @include size(12);
+    margin-bottom: 40px;
+    svg {
+        position: absolute;
+        left: 0;
+        top: 26px;
+        display: block;
+        transform: translateY(-85%);
+        fill: $c-green-0;
+    }
+    @include md-block {
+        @include size(5.5);
     }
 }
 
