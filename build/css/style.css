@@ -1550,7 +1550,7 @@ img {
 
 .request__title {
   text-align: center;
-  color: #0D2A56;
+  color: #fff;
   font-size: 1.4375rem;
   line-height: 2.5rem;
   padding-top: 82px;
@@ -1563,7 +1563,7 @@ img {
   font-size: 1.4375rem;
   line-height: 2.625rem;
   text-align: center;
-  color: #0d2a56;
+  color: #fff;
 }
 
 .request__form {
@@ -1584,7 +1584,7 @@ img {
   font-size: 0.9375rem;
   line-height: 2.625rem;
   padding-left: 20px;
-  background: #D4D9E9;
+  background: #fff;
   -webkit-box-shadow: inset 0 4px 3px rgba(0, 0, 0, 0.03);
           box-shadow: inset 0 4px 3px rgba(0, 0, 0, 0.03);
   border-top-left-radius: 5px;
@@ -1592,26 +1592,6 @@ img {
   border: none;
   height: 50px;
   margin: 0;
-}
-
-.request__input::-webkit-input-placeholder {
-  color: #fff;
-}
-
-.request__input::-moz-placeholder {
-  color: #fff;
-}
-
-.request__input:-ms-input-placeholder {
-  color: #fff;
-}
-
-.request__input::-ms-input-placeholder {
-  color: #fff;
-}
-
-.request__input::placeholder {
-  color: #fff;
 }
 
 .request__btn {
@@ -1979,6 +1959,22 @@ img {
 
 .form__data-btn:focus {
   outline: none;
+}
+
+.sales {
+  background: #015293;
+  padding-bottom: 77px;
+}
+
+.sales__title {
+  color: #ffffff;
+}
+
+.sales__descr {
+  font-size: 1.4375rem;
+  line-height: 2.5rem;
+  margin: 0;
+  margin-bottom: 35px;
 }
 
 .modal {
@@ -2381,10 +2377,6 @@ img {
     top: -44%;
     left: 50%;
     z-index: -1;
-  }
-
-  .callback__title {
-    width: calc(66.66667% - 40px);
   }
 
   .callback__input {

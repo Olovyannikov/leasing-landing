@@ -11,9 +11,7 @@
     padding-top: 70px;
     margin: 0 auto 9px;
     @include size(12);
-    @include md-block {
-        @include size(8);
-    }
+
 }
 
 .callback__descr {

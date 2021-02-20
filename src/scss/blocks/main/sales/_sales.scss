@@ -1,0 +1,15 @@
+.sales {
+    background: #015293;
+    padding-bottom: 77px;
+}
+
+.sales__title {
+    color: $c-white-0;
+}
+
+.sales__descr {
+    font-size: rem-calc(23);
+    line-height: rem-calc(40);
+    margin: 0;
+    margin-bottom: 35px;
+}
