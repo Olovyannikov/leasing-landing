@@ -9,22 +9,29 @@
 .features__intro-wrap {
     margin-bottom: 70px;
     position: relative;
-    &::after {
-        position: absolute;
-        content: '';
-        right:  0;
-        width: 60%;
-        height: 100%;
-        background: #F8F9FC;
+    background: #F8F9FC;
+    border-radius: 5px;
+    img {
+        display: none;
+        @media (min-width: 768px) {
+            display: block;
+        }
     }
 }
 
 .features__intro-text {
-    position: absolute;
-    content: '';
-    top: 40px;
-    right: 0;
     z-index: 1;
+    background: url("../img/features.png") no-repeat center;
+    background-size: cover;
+    text-align: center;
+    @media (min-width: 768px) {
+        text-align: unset;
+        position: absolute;
+        content: '';
+        top: 40px;
+        right: 0;
+        background: unset;
+    }
 }
 
 .features__intro-title {
@@ -42,6 +49,36 @@
     line-height: rem-calc(28);
     color: #333;
     max-width: 530px;
+    margin: 0 auto;
+    @media (min-width: 768px) {
+        margin: 0;
+    }
+}
+
+.features__icons {
+    @include list-reset;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-bottom: 100px;
+}
+
+.features__icon {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    width: 260px;
+    text-align: center;
+}
+
+.features__icons-descr {
+    color: #2F3A53;
+    font-family: $font-alt;
+    font-weight: 700;
+    font-size: rem-calc(18);
+    line-height: rem-calc(26);
+    margin: 26px 0 0;
 }
 
 .features__list {
@@ -59,6 +96,7 @@
     @include size(12);
     padding-left: 40px;
     margin-bottom: 26px;
+
     svg {
         position: absolute;
         top: 18px;
@@ -66,6 +104,7 @@
         display: block;
         fill: $c-green-0;
     }
+
     @include md-block {
         margin-bottom: 29.5px;
         @include size(6);
