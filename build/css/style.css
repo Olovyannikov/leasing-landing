@@ -801,9 +801,9 @@ img {
       -ms-transform: translate(0, 120%);
           transform: translate(0, 120%);
   opacity: 0;
-  -webkit-transition: all .8s ease 0s;
-  -o-transition: all .8s ease 0s;
-  transition: all .8s ease 0s;
+  -webkit-transition: all .2s ease 0s;
+  -o-transition: all .2s ease 0s;
+  transition: all .2s ease 0s;
 }
 
 .header__links a {
@@ -819,9 +819,9 @@ img {
       -ms-transform: translate(0, 0);
           transform: translate(0, 0);
   opacity: 1;
-  -webkit-transition: all .8s ease .8s;
-  -o-transition: all .8s ease .8s;
-  transition: all .8s ease .8s;
+  -webkit-transition: all .5s ease .8s;
+  -o-transition: all .5s ease .8s;
+  transition: all .5s ease .8s;
 }
 
 .features {
@@ -1973,8 +1973,7 @@ img {
 .sales__descr {
   font-size: 1.4375rem;
   line-height: 2.5rem;
-  margin: 0;
-  margin-bottom: 35px;
+  margin: 0 0 35px;
 }
 
 .modal {
@@ -2022,8 +2021,8 @@ img {
   font-size: 0.9375rem;
   line-height: 2.625rem;
   background: #F8F9FC;
-  -webkit-box-shadow: inset 0px 4px 7px rgba(240, 242, 249, 0.5);
-          box-shadow: inset 0px 4px 7px rgba(240, 242, 249, 0.5);
+  -webkit-box-shadow: inset 0 4px 7px rgba(240, 242, 249, 0.5);
+          box-shadow: inset 0 4px 7px rgba(240, 242, 249, 0.5);
   border-radius: 5px;
   margin-bottom: 27px;
   color: #2F3A53;

@@ -59,7 +59,7 @@
 
     transform: translate(0, 120%);
     opacity: 0;
-    transition: all .8s ease 0s;
+    transition: all .2s ease 0s;
 
     a {
         margin-bottom: 20px;
@@ -82,6 +82,6 @@
     &._active {
         transform: translate(0,0);
         opacity: 1;
-        transition: all .8s ease .8s;
+        transition: all .5s ease .8s;
     }
 }
